@@ -13,3 +13,9 @@
 2019-03-11 10:18:16 [1108] INFO  - Start Log
 2019-03-11 10:18:16 [1108] INFO  -  [PluginManager] [ZMQService\ZMQServiceImpl.cpp:94]:start zmqServer=tcp://127.0.0.1:7777, success
 2019-03-11 10:18:16 [1108] INFO  -  [PluginManager] [Global\NDPluginManagerGlobal.cpp:157]: Plugin Manager service start success.
+2019-03-11 14:43:38 [8116] INFO  - Start Log
+2019-03-11 14:43:42 [8116] INFO  -  [PluginManager] [ZMQService\ZMQServiceImpl.cpp:94]:start zmqServer=tcp://127.0.0.1:7777, success
+2019-03-11 14:43:42 [8116] INFO  -  [PluginManager] [Global\NDPluginManagerGlobal.cpp:173]: Plugin Manager service start success.
+2019-03-11 14:44:16 [3272] INFO  - Start Log
+2019-03-11 14:44:16 [3272] INFO  -  [PluginManager] [ZMQService\ZMQServiceImpl.cpp:94]:start zmqServer=tcp://127.0.0.1:7777, success
+2019-03-11 14:44:16 [3272] INFO  -  [PluginManager] [Global\NDPluginManagerGlobal.cpp:173]: Plugin Manager service start success.
