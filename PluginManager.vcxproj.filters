@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="CJsonHelper">
+      <UniqueIdentifier>{32f39ca5-b27a-4ff4-a139-58dad8248f43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CJsonHelper\cJSON">
+      <UniqueIdentifier>{746078ee-d9fa-47c3-8129-fff2431cded2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataProcess">
+      <UniqueIdentifier>{89691733-ca9a-45f9-923c-4d536aecf60f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DynamicLoad">
+      <UniqueIdentifier>{140c6251-7c37-4600-bee6-98d633a8b78d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Global">
+      <UniqueIdentifier>{1d634ced-0539-4d59-819d-9206d86f44f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CInterface">
+      <UniqueIdentifier>{35929a26-dea1-4f19-ab6d-abb75727c927}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty">
+      <UniqueIdentifier>{63a5f6f9-a380-437c-8d99-5789b66709dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\include">
+      <UniqueIdentifier>{3d1b842b-9781-408d-b931-71e9556a8971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\include\log4cplus">
+      <UniqueIdentifier>{fa7d7719-d1c9-41b7-8b2a-cb128ed3f201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ZMQService">
+      <UniqueIdentifier>{ff9f2d1e-ad0a-44c7-b84a-819ec28ad646}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{9f7eb20a-aff3-401f-8db5-c37508bfdbc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{ff0684e5-f47c-458a-9c3f-62416195dec1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CJsonHelper\cJSON\cJSON.c">
+      <Filter>CJsonHelper\cJSON</Filter>
+    </ClCompile>
+    <ClCompile Include="CJsonHelper\cJSON\cJSON_Utils.c">
+      <Filter>CJsonHelper\cJSON</Filter>
+    </ClCompile>
+    <ClCompile Include="CJsonHelper\CJsonHelper.cpp">
+      <Filter>CJsonHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicLoad\NDDynamicLoad.cpp">
+      <Filter>DynamicLoad</Filter>
+    </ClCompile>
+    <ClCompile Include="DataProcess\NDDataProcess.cpp">
+      <Filter>DataProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="CInterface\CFunctionImpl.cpp">
+      <Filter>CInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Global\NDPluginManagerGlobal.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicLoad\NDPluginLibraryLoad.cpp">
+      <Filter>DynamicLoad</Filter>
+    </ClCompile>
+    <ClCompile Include="Global\NDStaticFunctionGlobal.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="ZMQService\ZMQService.cpp">
+      <Filter>ZMQService</Filter>
+    </ClCompile>
+    <ClCompile Include="ZMQService\ZMQServiceImpl.cpp">
+      <Filter>ZMQService</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\NDBufferPool.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ZMQService\NDNetService.cpp">
+      <Filter>ZMQService</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\NDThread.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\NDTaskThread.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\NDTaskThreadManager.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="PluginManager_all.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CJsonHelper\cJSON\cJSON.h">
+      <Filter>CJsonHelper\cJSON</Filter>
+    </ClInclude>
+    <ClInclude Include="CJsonHelper\cJSON\cJSON_Utils.h">
+      <Filter>CJsonHelper\cJSON</Filter>
+    </ClInclude>
+    <ClInclude Include="CJsonHelper\CJsonHelper.h">
+      <Filter>CJsonHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicLoad\NDDynamicLoad.h">
+      <Filter>DynamicLoad</Filter>
+    </ClInclude>
+    <ClInclude Include="DataProcess\NDDataProcess.h">
+      <Filter>DataProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="CInterface\CPluginCommon.h">
+      <Filter>CInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CInterface\CFunctionImpl.h">
+      <Filter>CInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Global\NDPluginManagerGlobal.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicLoad\NDPluginLibraryLoad.h">
+      <Filter>DynamicLoad</Filter>
+    </ClInclude>
+    <ClInclude Include="CInterface\CFunctionMacro.h">
+      <Filter>CInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Global\NDStaticFunctionGlobal.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMQService\ZMQService.h">
+      <Filter>ZMQService</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMQService\ZMQServiceImpl.h">
+      <Filter>ZMQService</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CriticalSection.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\NDBufferPool.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMQService\NDNetService.h">
+      <Filter>ZMQService</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\NDThread.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\NDTaskThread.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\NDTaskThreadManager.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

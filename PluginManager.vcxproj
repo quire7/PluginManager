@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnityRelease|x64">
+      <Configuration>UnityRelease</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DFE7F765-E0AC-4FB9-BAD7-349425DA1905}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>PluginModel</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>bin/win/Debug64\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>bin/win/Release64\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>bin/win/UnityRelease64\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>./CJsonHelper;./DataProcess;./Global;./DynamicLoad;./CInterface;./ThirdParty/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>log4cplus.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./ThirdParty/lib64;</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>./CJsonHelper;./DataProcess;./Global;./DynamicLoad;./CInterface;./ThirdParty/include;./Common;./ZMQService;./Thread;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>log4cplus.lib;libzmq.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./ThirdParty/lib64;</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>./CJsonHelper;./DataProcess;./Global;./DynamicLoad;./CInterface;./ThirdParty/include;./Common;./ZMQService;./Thread;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>log4cplus.lib;libzmq.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./ThirdParty/lib64;</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CInterface\CFunctionImpl.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CJsonHelper\CJsonHelper.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CJsonHelper\cJSON\cJSON.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CJsonHelper\cJSON\cJSON_Utils.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Common\NDBufferPool.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="DataProcess\NDDataProcess.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="DynamicLoad\NDDynamicLoad.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="DynamicLoad\NDPluginLibraryLoad.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Global\NDPluginManagerGlobal.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Global\NDStaticFunctionGlobal.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="PluginManager_all.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Thread\NDTaskThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Thread\NDTaskThreadManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Thread\NDThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ZMQService\NDNetService.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ZMQService\ZMQService.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ZMQService\ZMQServiceImpl.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CInterface\CFunctionImpl.h" />
+    <ClInclude Include="CInterface\CFunctionMacro.h" />
+    <ClInclude Include="CInterface\CPluginCommon.h" />
+    <ClInclude Include="CJsonHelper\CJsonHelper.h" />
+    <ClInclude Include="CJsonHelper\cJSON\cJSON.h" />
+    <ClInclude Include="CJsonHelper\cJSON\cJSON_Utils.h" />
+    <ClInclude Include="Common\CriticalSection.h" />
+    <ClInclude Include="Common\NDBufferPool.h" />
+    <ClInclude Include="DataProcess\NDDataProcess.h" />
+    <ClInclude Include="DynamicLoad\NDDynamicLoad.h" />
+    <ClInclude Include="DynamicLoad\NDPluginLibraryLoad.h" />
+    <ClInclude Include="Global\NDPluginManagerGlobal.h" />
+    <ClInclude Include="Global\NDStaticFunctionGlobal.h" />
+    <ClInclude Include="Thread\NDTaskThread.h" />
+    <ClInclude Include="Thread\NDTaskThreadManager.h" />
+    <ClInclude Include="Thread\NDThread.h" />
+    <ClInclude Include="ZMQService\NDNetService.h" />
+    <ClInclude Include="ZMQService\ZMQService.h" />
+    <ClInclude Include="ZMQService\ZMQServiceImpl.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
